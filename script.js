@@ -7,7 +7,7 @@ function cambioOpcion(selectelement) {
             break;
         case "esfera":
             cambiarTitulo("Volumen esfera");
-            cambiarLabels("Radio", "Altura");
+            cambiarLabels("Radio");
             break;
         case "convertirDolar":
             cambiarTitulo("Convertidor divisas");
@@ -40,10 +40,8 @@ function ejecutar() {
             if (valor1 < 0) {
                 mostrarError("El campo Radio no puede ser negativo")
             }
-            if (valor2 < 0) {
-                mostrarError("El campo Altura no puede ser negativo")
-            }
-            resultadoValor = 3.1416 * Math.pow(valor1, 2) * valor2;
+           
+            resultadoValor =  (4/3) * Math.PI * Math.pow(valor1, 3);
             break;
         case "convertirDolar":
             if (valor1 < 0) {
@@ -84,3 +82,4 @@ function limpiar() {
     document.getElementById("valor2").value = "";
     document.getElementById("selecionaCalculo").selectedIndex = 0;
 }
+
