@@ -71,7 +71,12 @@ function mostrarError(error) {
 function cambiarLabels(label1, label2) {
     document.getElementById("label1").innerText = label1;
     document.getElementById("label2").innerText = label2;
-}
+
+if (!label2 || label2.trim() === "") {
+        document.getElementById("label2").style.display = "none";
+        
+    }
+
 
 function limpiar() {
     document.getElementById("titulo").innerText = "";
@@ -82,4 +87,5 @@ function limpiar() {
     document.getElementById("valor2").value = "";
     document.getElementById("selecionaCalculo").selectedIndex = 0;
 }
+
 
