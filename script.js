@@ -76,7 +76,7 @@ if (!label2 || label2.trim() === "") {
         document.getElementById("label2").style.display = "none";
         
     }
-
+     }
 
 function limpiar() {
     document.getElementById("titulo").innerText = "";
@@ -87,5 +87,6 @@ function limpiar() {
     document.getElementById("valor2").value = "";
     document.getElementById("selecionaCalculo").selectedIndex = 0;
 }
+
 
 
