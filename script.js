@@ -40,8 +40,8 @@ function ejecutar() {
             if (valor1 < 0) {
                 mostrarError("El campo Radio no puede ser negativo")
             }
-           
-            resultadoValor =  (4/3) * Math.PI * Math.pow(valor1, 3);
+
+            resultadoValor = (4 / 3) * Math.PI * Math.pow(valor1, 3);
             break;
         case "convertirDolar":
             if (valor1 < 0) {
@@ -56,7 +56,7 @@ function ejecutar() {
 
     }
     if (resultadoValor > 0) {
-        resultado.innerText = `El resultado es: ${resultadoValor.toFixed(2)}`;
+        resultado.innerText = El resultado es: ${resultadoValor.toFixed(2)};
     }
 }
 
@@ -70,13 +70,15 @@ function mostrarError(error) {
 
 function cambiarLabels(label1, label2) {
     document.getElementById("label1").innerText = label1;
-    document.getElementById("label2").innerText = label2;
-
-if (!label2 || label2.trim() === "") {
-        document.getElementById("label2").style.display = "none";
-        
+    if(label2){
+        document.getElementById("label2").innerText = label2;
     }
-     }
+
+    if (!label2 || label2.trim() === "") {
+        document.getElementById("label2").style.display = "none";
+
+    }
+}
 
 function limpiar() {
     document.getElementById("titulo").innerText = "";
